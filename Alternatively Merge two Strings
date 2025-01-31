@@ -1,0 +1,21 @@
+//Function for Alternatively Merge the String
+function mergedString(str1, str2){
+  //Declare the varible for the new string that gonna be get the combined string
+      let combineStr ="";
+  //Finfind the greatest length of the str    
+      let max = str1.length || str2.length;
+      
+  //For loop for hitrating the string index 
+  //Format : looing unitl the greatest length of the string
+    for(i=0; i<max; i++){
+      
+      //ternary expression or if conditions 
+      //checking wheater the  current index is greater than the i value
+        i < str1.length ? combineStr += str1[i] : null;
+        //concodenate the string by using the '+=' Operator
+        i < str2.length ? combineStr += str2[i] : null;
+    }
+    // return the combined str finally
+    return combineStr;
+    
+}
