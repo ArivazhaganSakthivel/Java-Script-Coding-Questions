@@ -1,0 +1,17 @@
+let arr = [1, 5, 6, 7, 8, 8, 9, 1];
+
+const FindDuplicate = (arr) => {
+    let duplicates = new Set();
+    
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) { // Fixed condition
+            if (arr[i] === arr[j]) {
+                duplicates.add(arr[i]); // Store in set to avoid duplicate prints
+            }
+        }
+    }
+
+    console.log([...duplicates]); // Convert set to array and print unique duplicates
+}
+
+FindDuplicate(arr);
